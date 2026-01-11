@@ -15,11 +15,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.text.style.TextOverflow
-import com.github.compose.ui.topappbar.ScaffoldExample
+import com.github.compose.topappbar.ScaffoldExample
 
-
+import androidx.activity.enableEdgeToEdge
 import com.github.compose.ui.theme.ComposeEmptyActivityTheme
 import androidx.activity.ComponentActivity
+
 
 
 
@@ -27,10 +28,12 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        
+        enableEdgeToEdge()
         setContent {
             ComposeEmptyActivityTheme {
-                ScaffoldExample()
+               ScaffoldExample()
+              
+              
             }
         }
     }
